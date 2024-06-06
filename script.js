@@ -1,3 +1,4 @@
+// Original JavaScript
 document.addEventListener('DOMContentLoaded', function() {
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -22,11 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
       footer.classList.remove('show-footer');
     }
   });
-
-  // Toggle mobile menu
-  const menuIcon = document.querySelector('.menu-icon');
-  const navMenu = document.querySelector('navmenuIcon.addEventListener('click', function() {
-    navMenu.classList.toggle('show');
-  });
 });
 
+// New JavaScript for Dropdown Menu Toggle
+function toggleMenu() {
+  var navMenu = document.getElementById('nav-menu');
+  if (navMenu.classList.contains('show')) {
+    navMenu.classList.remove('show');
+  } else {
+    navMenu.classList.add('show');
+  }
+}
