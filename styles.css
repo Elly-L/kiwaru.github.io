@@ -62,7 +62,7 @@ section {
 }
 
 .custom-section, .grey-section {
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,24 +80,20 @@ section {
 }
 
 .custom-section .image-container {
-  width: 100%; /* Full width on mobile */
+  width: 100%;
 }
 
 .custom-section .image-container img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
-}
-
-.custom-section .text-container {
-  width: 100%; /* Full width on mobile */
+  height: auto;
 }
 
 .grey-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
-  height: auto;
-  flex-direction: column; /* Stack elements vertically on mobile */
+  padding: 20px;
 }
 
 .custom-section div:first-child, .grey-section div:first-child {
@@ -108,11 +104,11 @@ section {
   height: 100%;
   width: 100%;
   font-size: large;
-  padding-left: 50px;
+  padding-left: 20px;
 }
 
 .custom-section h2, .grey-section h2 {
-  font-size: 2rem; /* Smaller font size on mobile */
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -125,14 +121,14 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: auto;
   width: 100%;
-  padding-right: 20px;
+  padding: 0 20px;
 }
 
 .image-container img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
   border-radius: 50%; /* Make images circular */
 }
 
@@ -142,7 +138,6 @@ footer {
   text-align: center;
   padding: 30px 0;
   width: 100%;
-  bottom: 0; /* Position at the bottom of the viewport */
 }
 
 .show-footer footer {
@@ -151,28 +146,27 @@ footer {
 
 .container {
   display: flex;
-  flex-direction: column; /* Stack elements vertically on mobile */
-  width: 80vw;
-  border: 2px solid #ccc;
-  border-radius: 15px;
+  flex-direction: column;
+  width: 100%;
   padding: 20px;
   margin: auto;
   box-shadow: 0 4px 8px rgba(31, 176, 8, 0.861);
 }
 
 .text {
-  width: 100%; /* Full width on mobile */
+  width: 100%;
 }
 
 .image {
-  width: 100%; /* Full width on mobile */
+  width: 100%;
   display: flex;
   align-items: center;
+  margin-top: 20px;
 }
 
 .image img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
   object-fit: cover;
   border-radius: 15px;
 }
@@ -187,8 +181,7 @@ footer {
 
 .benefits-container {
   display: flex;
-  flex-direction: column; /* Stack elements vertically on mobile */
-  justify-content: space-around;
+  flex-direction: column;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -199,12 +192,14 @@ footer {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-bottom: 20px; /* Space between benefits */
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .benefit img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
+  object-fit: cover;
   border-radius: 30px; /* Potato shape approximation */
   margin-bottom: 10px;
 }
@@ -216,14 +211,14 @@ footer {
 
 .team-members-container {
   display: flex;
-  flex-direction: column; /* Stack team members vertically on mobile */
-  justify-content: center;
-  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   margin: auto;
   background-color: #f4f4f4;
   border-radius: 20px; /* Add curved edges */
   overflow: hidden;
-  padding: 20px; /* Ensure children stay within the curved container */
+  padding: 20px;
 }
 
 .team-member {
@@ -251,37 +246,56 @@ footer {
   font-size: large;
 }
 
-/* Media Queries */
-@media (min-width: 768px) {
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .custom-section, .grey-section {
-    flex-direction: row; /* Row layout on larger screens */
+    flex-direction: column;
+    padding: 20px;
   }
 
-  .custom-section .text-container, .custom-section .image-container {
-    width: 50%;
+  .custom-section .image-container, .grey-section .image-container {
+    order: -1; /* Images appear first */
   }
 
-  .container {
-    flex-direction: row; /* Row layout on larger screens */
-  }
-
-  .text, .image {
-    width: 50%;
+  .custom-section div:first-child, .grey-section div:first-child {
+    width: 100%;
+    padding-left: 0;
   }
 
   .benefits-container {
-    flex-direction: row; /* Row layout on larger screens */
+    flex-direction: column;
+    align-items: center;
   }
 
   .benefit {
-    width: 25%; /* Adjust benefit width on larger screens */
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+
+  .text {
+    width: 100%;
   }
 
   .team-members-container {
-    flex-direction: row; /* Row layout on larger screens */
-  }
-
-  .team-member {
-    width: 33%; /* Adjust team member width on larger screens */
+    width: 100%;
+    padding: 20px;
   }
 }
