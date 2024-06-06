@@ -279,4 +279,59 @@ footer {
   }
 
   .team-members-container {
-    flex-direction:
+    flex-direction:   row; /* Row layout on larger screens */
+  }
+
+  .team-member {
+    width: 33%; /* Adjust team member width on larger screens */
+  }
+}
+
+/* New CSS for Mobile Optimization */
+@media (max-width: 767px) {
+  header img {
+    height: 30px; /* Decrease logo size for mobile */
+  }
+
+  header h1 {
+    font-size: 1.5rem; /* Decrease title font size for mobile */
+  }
+
+  nav ul {
+    display: none; /* Hide navigation links by default on mobile */
+    position: absolute;
+    top: 80px; /* Position the dropdown below the header */
+    right: 0;
+    background-color: #658721; /* Same as header background color */
+    width: 100%;
+    z-index: 1001; /* Ensure dropdown is above other content */
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 10px 0; /* Adjust padding for mobile */
+  }
+
+  .show {
+    display: flex !important; /* Ensure dropdown is visible when toggled */
+  }
+
+  .custom-section div:first-child,
+  .grey-section div:first-child {
+    padding-left: 10px; /* Adjust left padding for text containers */
+  }
+
+  .custom-section h2,
+  .grey-section h2,
+  .custom-section p,
+  .grey-section p {
+    font-size: 1rem; /* Decrease font size for mobile */
+  }
+}
+
