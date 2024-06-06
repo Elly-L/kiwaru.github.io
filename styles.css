@@ -1,3 +1,5 @@
+/* Base styles */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -17,6 +19,7 @@ header {
   width: 100%;
   z-index: 1000;
   height: 80px;
+  justify-content: space-between;
 }
 
 header img {
@@ -31,6 +34,7 @@ header h1 {
 nav {
   display: flex;
   flex-grow: 1;
+  justify-content: flex-end;
 }
 
 nav ul {
@@ -57,18 +61,61 @@ nav ul li a:hover {
   color: black;
 }
 
+/* Responsive styles */
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: #658721;
+  }
+
+  nav ul li {
+    text-align: center;
+    margin: 0;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    border-top: 1px solid #ffffff;
+  }
+
+  nav.show {
+    display: flex;
+  }
+}
+
+/* Other existing styles */
+
 section {
   padding-top: 90px; /* Adjust to accommodate fixed header */
 }
 
-.custom-section, .grey-section {
+.custom-section,
+.grey-section {
+  height: 70vh;
   width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: left;
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 20 px;
   box-sizing: border-box;
   background-color: #f4f4f4a0;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -80,39 +127,41 @@ section {
 }
 
 .custom-section .image-container {
-  width: 100%;
+  width: 50%;
 }
 
 .custom-section .image-container img {
-  width: 100%;
-  height: auto;
+  width: 120%;
+  height: 120%;
 }
 
 .grey-section {
   display: flex;
-  flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  height: auto;
 }
 
-.custom-section div:first-child, .grey-section div:first-child {
+.custom-section div:first-child,
+.grey-section div:first-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   height: 100%;
-  width: 100%;
+  width: 75%;
   font-size: large;
-  padding-left: 20px;
+  padding-left: 50px;
 }
 
-.custom-section h2, .grey-section h2 {
-  font-size: 2rem;
+.custom-section h2,
+.grey-section h2 {
+  font-size: 2.5rem;
   margin: 0;
 }
 
-.custom-section p, .grey-section p {
+.custom-section p,
+.grey-section p {
   font-size: 1rem;
   margin: 0;
 }
@@ -121,14 +170,14 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
-  width: 100%;
-  padding: 0 20px;
+  height: 100%;
+  width: 25%;
+  padding-right: 20px;
 }
 
 .image-container img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   border-radius: 50%; /* Make images circular */
 }
 
@@ -138,6 +187,7 @@ footer {
   text-align: center;
   padding: 30px 0;
   width: 100%;
+  bottom: 0; /* Position at the bottom of the viewport */
 }
 
 .show-footer footer {
@@ -146,27 +196,27 @@ footer {
 
 .container {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  width: 80vw;
+  border: 2px solid #ccc;
+  border-radius: 15px;
   padding: 20px;
   margin: auto;
   box-shadow: 0 4px 8px rgba(31, 176, 8, 0.861);
 }
 
 .text {
-  width: 100%;
+  width: 50%;
 }
 
 .image {
-  width: 100%;
+  width: 50%;
   display: flex;
   align-items: center;
-  margin-top: 20px;
 }
 
 .image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   border-radius: 15px;
 }
@@ -181,7 +231,7 @@ footer {
 
 .benefits-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -191,14 +241,13 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  padding: 20px;
-  margin-bottom: 20px;
+  width: 25%;
+  padding-left: 40px;
 }
 
 .benefit img {
   width: 100%;
-  height: auto;
+  height: 300px;
   object-fit: cover;
   border-radius: 30px; /* Potato shape approximation */
   margin-bottom: 10px;
@@ -211,14 +260,14 @@ footer {
 
 .team-members-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  justify-content: center;
+  width: 70%;
   margin: auto;
   background-color: #f4f4f4;
   border-radius: 20px; /* Add curved edges */
   overflow: hidden;
-  padding: 20px;
+  padding-right: 0px;
+  padding-bottom: 20px; /* Ensure children stay within the curved container */
 }
 
 .team-member {
@@ -229,73 +278,12 @@ footer {
   align-items: center; /* Center content horizontally */
 }
 
-.image-container {
-  margin-bottom: 10px; /* Add some space between images and text */
-  display: flex;
-  justify-content: center; /* Center image horizontally */
-}
-
-.image-container img {
+.team-member img {
   width: 100px; /* Adjust image width */
   height: 100px; /* Adjust image height */
   border-radius: 50%; /* Make images circular */
-  margin-bottom: 10px; /* Adjust spacing between images */
 }
 
 .section-header {
   font-size: large;
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto;
-  }
-  
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .custom-section, .grey-section {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .custom-section .image-container, .grey-section .image-container {
-    order: -1; /* Images appear first */
-  }
-
-  .custom-section div:first-child, .grey-section div:first-child {
-    width: 100%;
-    padding-left: 0;
-  }
-
-  .benefits-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .benefit {
-    width: 100%;
-  }
-
-  .container {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .image {
-    margin-top: 20px;
-  }
-
-  .text {
-    width: 100%;
-  }
-
-  .team-members-container {
-    width: 100%;
-    padding: 20px;
-  }
 }
