@@ -1,3 +1,4 @@
+/* Original CSS */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -77,12 +78,10 @@ section {
 .custom-section {
   background-color: #6B8E23;
   color: white;
-  flex-direction: column; /* Stack elements vertically on mobile */
-  padding: 20px;
 }
 
 .custom-section .image-container {
-  width: 100%;
+  width: 100%; /* Full width on mobile */
 }
 
 .custom-section .image-container img {
@@ -91,16 +90,15 @@ section {
 }
 
 .custom-section .text-container {
-  width: 100%;
-  font-size: 1rem; /* Smaller font size on mobile */
+  width: 100%; /* Full width on mobile */
 }
 
 .grey-section {
   display: flex;
-  flex-direction: column;
   align-items: center;
   width: 100%;
   height: auto;
+  flex-direction: column; /* Stack elements vertically on mobile */
 }
 
 .custom-section div:first-child, .grey-section div:first-child {
@@ -111,11 +109,11 @@ section {
   height: 100%;
   width: 100%;
   font-size: large;
-  padding-left: 0; /* Remove padding on mobile */
+  padding-left: 50px;
 }
 
 .custom-section h2, .grey-section h2 {
-  font-size: 1.5rem; /* Smaller font size on mobile */
+  font-size: 2rem; /* Smaller font size on mobile */
   margin: 0;
 }
 
@@ -130,12 +128,12 @@ section {
   align-items: center;
   height: 100%;
   width: 100%;
-  padding-right: 0; /* Remove padding on mobile */
+  padding-right: 20px;
 }
 
 .image-container img {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  width: auto;
+  height: 100%;
   border-radius: 50%; /* Make images circular */
 }
 
@@ -155,7 +153,7 @@ footer {
 .container {
   display: flex;
   flex-direction: column; /* Stack elements vertically on mobile */
-  width: 90vw;
+  width: 80vw;
   border: 2px solid #ccc;
   border-radius: 15px;
   padding: 20px;
@@ -281,56 +279,4 @@ footer {
   }
 
   .team-members-container {
-    flex-direction: row; /* Row layout on larger screens */
-  }
-
-  .team-member {
-    width: 33%; /* Adjust team member width on larger screens */
-  }
-}
-
-/* Responsive menu for mobile */
-@media (max-width: 768px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #658721;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-    cursor: pointer;
-  }
-
-  .menu-icon div {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    margin: 6px 0;
-  }
-
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  nav ul li {
-    width: 100%;
-  }
-
-  nav ul li a {
-    padding: 14px;
-    text-align: left;
-  }
-}
+    flex-direction:
