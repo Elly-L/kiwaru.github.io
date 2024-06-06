@@ -1,4 +1,3 @@
-// JavaScript code from the original code
 document.addEventListener('DOMContentLoaded', function() {
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -23,4 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
       footer.classList.remove('show-footer');
     }
   });
+
+  // Toggle mobile menu
+  const menuIcon = document.querySelector('.menu-icon');
+  const navMenu = document.querySelector('navmenuIcon.addEventListener('click', function() {
+    navMenu.classList.toggle('show');
+  });
 });
+
