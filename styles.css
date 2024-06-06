@@ -1,5 +1,3 @@
-/* style.css */
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -63,9 +61,7 @@ section {
   padding-top: 90px; /* Adjust to accommodate fixed header */
 }
 
-.custom-section,
-.grey-section {
-  height: 70vh;
+.custom-section, .grey-section {
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -79,46 +75,44 @@ section {
 }
 
 .custom-section {
-  background-color: #6b8e23;
+  background-color: #6B8E23;
   color: white;
 }
 
 .custom-section .image-container {
-  width: 50%; /* Adjusted width to occupy half of the section */
+  width: 100%;
 }
 
 .custom-section .image-container img {
-  width: 120%;
-  height: 120%; /* Adjusted width to occupy half of the section */
-}
-
-.grey-section {
-  display: flex;
-  align-items: center;
   width: 100%;
   height: auto;
 }
 
-.custom-section div:first-child,
-.grey-section div:first-child {
+.grey-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.custom-section div:first-child, .grey-section div:first-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   height: 100%;
-  width: 75%;
+  width: 100%;
   font-size: large;
-  padding-left: 50px;
+  padding-left: 20px;
 }
 
-.custom-section h2,
-.grey-section h2 {
-  font-size: 2.5rem;
+.custom-section h2, .grey-section h2 {
+  font-size: 2rem;
   margin: 0;
 }
 
-.custom-section p,
-.grey-section p {
+.custom-section p, .grey-section p {
   font-size: 1rem;
   margin: 0;
 }
@@ -127,24 +121,23 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 25%;
-  padding-right: 20px;
+  height: auto;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .image-container img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
   border-radius: 50%; /* Make images circular */
 }
 
 footer {
-  background-color: #6b8e23;
+  background-color: #6B8E23;
   color: white;
   text-align: center;
   padding: 30px 0;
   width: 100%;
-  bottom: 0; /* Position at the bottom of the viewport */
 }
 
 .show-footer footer {
@@ -153,27 +146,27 @@ footer {
 
 .container {
   display: flex;
-  width: 80vw;
-  border: 2px solid #ccc;
-  border-radius: 15px;
+  flex-direction: column;
+  width: 100%;
   padding: 20px;
   margin: auto;
   box-shadow: 0 4px 8px rgba(31, 176, 8, 0.861);
 }
 
 .text {
-  width: 50%;
+  width: 100%;
 }
 
 .image {
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
+  margin-top: 20px;
 }
 
 .image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 15px;
 }
@@ -188,7 +181,7 @@ footer {
 
 .benefits-container {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -198,56 +191,111 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25%;
-  padding-left: 40px;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .benefit img {
   width: 100%;
-  height: 300px;
+  height: auto;
   object-fit: cover;
   border-radius: 30px; /* Potato shape approximation */
   margin-bottom: 10px;
 }
 
 .benefit ul {
-  list-style-image: url('Kiwaru web/images /leaf-bullet.png'); /* Assuming you have a leaf image for bullets */
-padding-left: 30px;
+  list-style-image: url('Kiwaru web/images/leaf-bullet.png'); /* Assuming you have a leaf image for bullets */
+  padding-left: 30px;
 }
 
 .team-members-container {
-display: flex;
-justify-content: center;
-width: 70%;
-margin: auto;
-background-color: #f4f4f4;
-border-radius: 20px; /* Add curved edges /
-overflow: hidden;
-padding-right: 0px;
-padding-bottom: 20px; / Ensure children stay within the curved container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  background-color: #f4f4f4;
+  border-radius: 20px; /* Add curved edges */
+  overflow: hidden;
+  padding: 20px;
 }
 
 .team-member {
-text-align: center;
-padding: 20px; /* Adjust padding as needed */
-display: flex;
-flex-direction: column;
-align-items: center; / Center content horizontally */
+  text-align: center;
+  padding: 20px; /* Adjust padding as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
 }
 
 .image-container {
-margin-bottom: 10px; /* Add some space between images and text */
-display: flex;
-justify-content: center; / Center image horizontally */
+  margin-bottom: 10px; /* Add some space between images and text */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
 }
 
 .image-container img {
-width: 100px; /* Adjust image width */
-height: 100px; /* Adjust image height */
-border-radius: 50%; /* Make images circular */
-margin-bottom: 10px; /* Adjust spacing between images */
+  width: 100px; /* Adjust image width */
+  height: 100px; /* Adjust image height */
+  border-radius: 50%; /* Make images circular */
+  margin-bottom: 10px; /* Adjust spacing between images */
 }
 
 .section-header {
-font-size: large;
+  font-size: large;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-section, .grey-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .custom-section .image-container, .grey-section .image-container {
+    order: -1; /* Images appear first */
+  }
+
+  .custom-section div:first-child, .grey-section div:first-child {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .benefits-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit {
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  .team-members-container {
+    width: 100%;
+    padding: 20px;
+  }
 }
