@@ -145,6 +145,8 @@ footer {
   padding: 30px 0;
   width: 100%;
   bottom: 0; /* Position at the bottom of the viewport */
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
 .show-footer footer {
@@ -221,10 +223,10 @@ justify-content: center;
 width: 70%;
 margin: auto;
 background-color: #f4f4f4;
-border-radius: 20px; /* Add curved edges /
+border-radius: 20px; /* Add curved edges */
 overflow: hidden;
 padding-right: 0px;
-padding-bottom: 20px; / Ensure children stay within the curved container */
+padding-bottom: 20px; / *Ensure children stay within the curved container */
 }
 
 .team-member {
@@ -232,7 +234,7 @@ text-align: center;
 padding: 20px; /* Adjust padding as needed */
 display: flex;
 flex-direction: column;
-align-items: center; / Center content horizontally */
+align-items: center; /* Center content horizontally */
 }
 
 .image-container {
